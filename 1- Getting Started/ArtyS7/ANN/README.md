@@ -23,6 +23,7 @@ Required components:
 ![Image showing the initial connections to the Arduino](https://icii.io/wp-content/uploads/2022/01/Arduino-Mega-Connections.png)
 <p style="text-align: center;">Image 2. Arduino connections</p>
 Frist, we will connect the jumper wires and resistors to the Arduino. This will require 4 connections as show in the table below. Connect a jumper wire to each pin in the table. 
+
 | Wire Name  | Pin   | Description | 
 | -----      | ----- | ----- |
 | Reset      | 4     | Raised hire at the very beginning of operations to initialize registers within the ArtyS7 |
