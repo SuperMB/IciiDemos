@@ -38,7 +38,7 @@ This setup requires a voltage divider to ensure that the communication voltages 
 - Connections that **do** need voltage dividers: Reset, Arduino TX
 - Connections that **do not** need voltage dividers: Arduino RX, GND
 
-Create a voltage divider for Reset. Using a bread board, or other method, place a 1k &#x2126; resistor in series with a 2k &#x2126; resistor. Connect the disconnected end of the 2k &#x2126; resistor to GND. Now, connect the Reset jumper to the disconnected end of the 1k &#x2126; resistor. The voltage divider will be connected to the ArtyS7 in a future step. 
+Create a voltage divider for Reset. Using a breadboard, or other method, place a 1k &#x2126; resistor in series with a 2k &#x2126; resistor. Connect the disconnected end of the 2k &#x2126; resistor to GND. Now, connect the Reset jumper to the disconnected end of the 1k &#x2126; resistor. The voltage divider will be connected to the ArtyS7 in a future step. 
 
 Create a voltage divider for Arduino RX following the same procedure as the one for Reset. 
  
@@ -55,10 +55,32 @@ Create a voltage divider for Arduino RX following the same procedure as the one 
 Next, we will connect the Arduino and voltage dividers to the ArtyS7. Image 3 shows the final connections between the two boards. Image 4 shows a more descriptive connection to the ArtyS7 Pmod header. 
 
 ### Pmod Header
-Pmod is a popular header used by Digilent (ArtyS7 manufacturer). The Pmod headers can be used as generic IOs (inputs/outputs) or plug and play modules, such as cameras or sensors, provided by Digilent or other manufacturers. We will use the JA Pmod header for the Arduino - ArtyS7 communication.   
+Pmod is a popular header used by Digilent (ArtyS7 manufacturer). The Pmod headers can be used as generic IOs (inputs/outputs) or plug and play modules, such as cameras or sensors, provided by Digilent or other manufacturers. We will use the JA Pmod header for the Arduino - ArtyS7 communication. More information on the Pmod header can be found in the [ArtyS7 Reference Manual](https://digilent.com/reference/programmable-logic/arty-s7/reference-manual).
 
+Each Pmod header is setup such that when looking the holes, the left most column inputs are both VCC and the second left most column inputs are both GND. This is reflected in Image 4. 
+
+We will refer to the pin input locations on the Pmod header according to the layout below. Again, this assumes you are looking directly at the holes on the header.
+
+
+
+
+
+| | Left  |  |  |  |  | Right |
+| :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
+| **Top**    | 6  | 5  | 4  | 3 | 2 | 1 |
+| **Bottom** | 12 | 11 | 10 | 9 | 8 | 7 |
+
+
+
+
+### Non-Voltage Divider Connections
+First, connect a jumper wire to the GND input on JA to the Arduino GND. This can be a direct connection with a single wire or it can be connected through a breadboard. This should tie all of the ground wires together. 
+
+Next, connect a jumper wire for the Arduino RX signal. Connect the jumper to the top row on the Pmod header in the position 
 
 ## PC
+
+
 
 
 
