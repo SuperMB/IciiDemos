@@ -62,42 +62,41 @@ Each Pmod header is setup such that when looking the holes, the left most column
 We will refer to the pin input locations on the Pmod header according to the layout below. Again, this assumes you are looking directly at the holes on the header.
 
 
-
-
-
 | | Left  |  |  |  |  | Right |
 | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: | :-----: |
 | **Top**    | 6  | 5  | 4  | 3 | 2 | 1 |
 | **Bottom** | 12 | 11 | 10 | 9 | 8 | 7 |
 
+Respectively, jumpers for the Reset, Arduino TX, Arduino RX, and GND signals will be connected to the following Pmod pins.
+
+
+| Wire Name  | Pin   |  
+| -----      | ----- | 
+| Reset      |  3    | 
+| Arduino TX |  1    | 
+| Arduino RX |  2    | 
+| GND        |  5    | 
 
 
 
 ### Non-Voltage Divider Connections
-First, connect a jumper wire to the GND input on JA to the Arduino GND. This can be a direct connection with a single wire or it can be connected through a breadboard. This should tie all of the ground wires together. 
+First, we will connect the GND wire. Connect a jumper wire to the JA Pmod header, pin 5, and connect the jumper wire to the Arduino GND. This can be a direct connection with a single wire or it can be connected through a breadboard. This should tie the ground wires for the Arduino, ArtyS7, and voltage dividers together. 
 
-Next, connect a jumper wire for the Arduino RX signal. Connect the jumper to the top row on the Pmod header in the position 
+Next, connect a jumper wire for the Arduino RX signal. Connect the jumper to the JA Pmod header, pin 2, and connect the jumper to pin 19 on the Arduino. Similarly, this can be connected directly or through a bread board.  
+
+### Voltage Divider Connections
+Now we will connect the Reset and Arduino TX signals using the voltage dividers we created previously. Starting with the Reset signal, connected a jumper wire to pin 3 on the JA Pmod header. Now, connect the other end to the node that connects the respective 1k &#x2126; and 2k &#x2126; resitors for the Reset signal. This should resemble the connection in Image 4. 
+
+Similarly, for the Arduino TX signal, connect a jumper wire to pin 1 on the JA Pmod header. Connect the other end to the node that connects the respective 1k &#x2126; and 2k &#x2126; resitors for the Arduino TX signal. 
+
+At this point, the Arduino and ArtyS7 should be connected as shown in Image 3. 
 
 ## PC
 
+![Full image showing PC connected to Arduino connected to ArtyS7](https://icii.io/wp-content/uploads/2022/01/ANNArtyS7.png)
+<p align="center">Image 5. Final system with PC connected to Arduino and ArtyS7.</p>
 
 
+The final step is to connect the Arduino and ArtyS7 to your PC. Connect a USB cable to each using the respective cable type and connect them to your PC. The PC - Arduino connection will be used to program the Arduino and observe the results from the ANN inferences. The PC - ArtyS7 connection will only be used to program the ArtyS7. Once programmed, the ArtyS7 will function as expected on power up without a PC connection.
 
-
-
-
-
-
-### Step 1 - Download Vivado
-Vivado is Xilinx's development and programming software suite and was initially released in 2012. For use with Icii, we recommend you download the Vivado Lab Solutions Verison. This version takes up much less space on your computer and will enable to program your FPGA. If you are interested in doing other FPGA development, you may need a different version of Vivad. 
-
-Download and install your selected version of Vivado. You will need a free Xilinx account. 
-
-Vivado download: https://www.xilinx.com/support/download.html 
-
-### Step 2 - Install the Digilent Board Files
-If you are using one of the Digilent development boards you will need to perform this step. You can follow Digilent's programming guide using the link below. 
-
-Digilent board files instructions: https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk
-
-
+This ends the connection tutorial. A future tutorial will walk you through programming and using each of the components. 
