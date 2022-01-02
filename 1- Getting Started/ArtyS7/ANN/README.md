@@ -49,7 +49,7 @@ Create a voltage divider for Arduino RX following the same procedure as the one 
 <p align="center">Image 3. Arduino connected to voltage divider and ArtyS7.</p>
 
 
-![Image showing a detailed depiction of the Arduino headers connected to the ArtyS7 Pmod header](https://icii.io/wp-content/uploads/2022/01/Pmod-To-Arduino.png)
+![Image showing a detailed depiction of the Arduino headers connected to the ArtyS7 Pmod header](https://icii.io/wp-content/uploads/2022/01/PMOD-To-Arduino.png)
 <p align="center">Image 4. Zoomed in connections between Arduino headers and ArtyS7 Pmod.</p>
 
 Next, we will connect the Arduino and voltage dividers to the ArtyS7. Image 3 shows the final connections between the two boards. Image 4 shows a more descriptive connection to the ArtyS7 Pmod header. 
