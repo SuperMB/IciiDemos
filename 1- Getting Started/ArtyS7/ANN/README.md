@@ -4,7 +4,7 @@ This tutorial is for people using an ArtyS7 with an Arduino Mega for ANNs. In th
 
 ## Overiew
 
-![Full image showing PC connected to Arduino connected to ArtyS7](https://icii.io/wp-content/uploads/2022/01/ANNArtyS7.png)
+![Full image showing PC connected to Arduino connected to ArtyS7](https://icii.io/wp-content/uploads/2022/01/ANNArtyS7.svg)
 <p align="center">Image 1. Final system with PC connected to Arduino and ArtyS7.</p>
 
 Once setup is completed the Arduino will collect sensor data and use the ArtyS7 to perform the ANN inference. The PC is only used to read the result of the inference from the Arduino. This tutorial describes how to physically connect the system. 
@@ -21,7 +21,7 @@ Required components:
 
 
 ## Arduino Mega
-![Image showing the initial connections to the Arduino](https://icii.io/wp-content/uploads/2022/01/Arduino-Mega-Connections.png)
+![Image showing the initial connections to the Arduino](https://icii.io/wp-content/uploads/2022/01/Arduino-Mega-Connections.svg)
 <p align="center">Image 2. Arduino connections</p>
 
 Frist, we will connect the jumper wires and resistors to the Arduino. This will require 4 connections as show in the table below. Connect a jumper wire to each pin in the table. 
@@ -45,11 +45,11 @@ Create a voltage divider for Arduino RX following the same procedure as the one 
 
 
 ## ArtyS7
-![Image showing the Arduino connected to the ArtyS7](https://icii.io/wp-content/uploads/2022/01/Arduino-Connected-To-ArtyS7.png)
+![Image showing the Arduino connected to the ArtyS7](https://icii.io/wp-content/uploads/2022/01/Arduino-Connected-To-ArtyS7.svg)
 <p align="center">Image 3. Arduino connected to voltage divider and ArtyS7.</p>
 
 
-![Image showing a detailed depiction of the Arduino headers connected to the ArtyS7 Pmod header](https://icii.io/wp-content/uploads/2022/01/PMOD-To-Arduino.png)
+![Image showing a detailed depiction of the Arduino headers connected to the ArtyS7 Pmod header](https://icii.io/wp-content/uploads/2022/01/PMOD-To-Arduino.svg)
 <p align="center">Image 4. Zoomed in connections between Arduino headers and ArtyS7 Pmod.</p>
 
 Next, we will connect the Arduino and voltage dividers to the ArtyS7. Image 3 shows the final connections between the two boards. Image 4 shows a more descriptive connection to the ArtyS7 Pmod header. 
@@ -93,7 +93,7 @@ At this point, the Arduino and ArtyS7 should be connected as shown in Image 3.
 
 ## PC
 
-![Full image showing PC connected to Arduino connected to ArtyS7](https://icii.io/wp-content/uploads/2022/01/ANNArtyS7.png)
+![Full image showing PC connected to Arduino connected to ArtyS7](https://icii.io/wp-content/uploads/2022/01/ANNArtyS7.svg)
 <p align="center">Image 5. Final system with PC connected to Arduino and ArtyS7.</p>
 
 
