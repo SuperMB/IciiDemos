@@ -4,11 +4,11 @@ Welcome to Icii! Here we will help you get you setup up and running. This is you
 
  To get setup you will need to complete 3 steps.
 
-## Step 1, Hardware Setup
-Start here by diving into the [Hardware](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/Hardware/)
-
-## Step 2, Install Software
+## Step 1, Install Software
 Next, install software from Arduino and Xilinx following this [Tutorial](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/Software/)
+
+## Step 2, Hardware Setup
+Start here by diving into the [Hardware](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/Hardware/)
 
 ## Step 3, Using the Icii Bundle
 Learn how to use the setup to perform AI inferencing with the provided [Icii Bundle](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/IciiBundle/)
