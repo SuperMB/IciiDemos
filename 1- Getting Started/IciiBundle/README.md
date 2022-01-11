@@ -47,10 +47,31 @@ The installer will remain on a similar screen untill the installation is finishe
 ![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-13.png)
 
 
+### Step 1.5 - Install the Digilent Board Files
+If you are using one of the Digilent development boards you will need to perform this step. Digilent provides a good instructions, so follow their [Tutorial](https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk).
 
+## Step 2 - Install the Arduino IDE
 
+Next, install the Arduino IDE so that you can program your Arduino. Go to the [Arduino Download Page](https://www.arduino.cc/en/software). Click your respective operating system on the right side. This tutorial follows a Windows installation. Click "Win 7 and newer".
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-1.png)
 
-## Step 2 - Install the Digilent Board Files
-If you are using one of the Digilent development boards you will need to perform this step. You can follow Digilent's programming guide using the link below. 
+If you like, you may contribute to Arduino, otherwise click Just Download. This will download an installer file with a name similar to "arduino-1.8.19-windows.exe". 
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-2.png)
 
-Digilent board files instructions: https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk
+Run the installer that was just downloaded, it should open a window as seen below. It may ask you for permission to run the installer. 
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-3.png)
+
+We recommend leaving all of the defaults selected. Click Next. 
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-4.png)
+
+If you want, you may change the download location, but we recommend using the default. Click Install. 
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-5.png)
+
+The Arduino installer will now proceed to install the software. Let it continue until it finishes. 
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-6.png)
+
+Once the installer is finished, it will show Completed. Click Close. 
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-7.png)
+
+## Next Steps
+Congratulations! You have now finished installing the required software. Click [Here](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/IciiBundle/) to continue the tutorial and learn about how to use the Icii Bundle that you receive. 
