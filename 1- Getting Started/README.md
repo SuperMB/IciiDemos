@@ -1,18 +1,14 @@
 # Getting Started with Icii
 
-Welcome to Icii! Our focus is high performance, low power embedded AI. 
+Welcome to Icii! Here we will help you get you setup up and running. This is your landing space, where to start, and where to come back to. Save this page to easily get back here!
 
-## Required Software
-To program the Xilinx FPGAs you will need to do the following steps.
+ To get setup you will need to complete 3 steps.
 
-### Step 1 - Download Vivado
-Vivado is Xilinx's development and programming software suite and was initially released in 2012. For use with Icii, we recommend you download the Vivado Lab Solutions Verison. This version takes up much less space on your computer and will enable to program your FPGA. If you are interested in doing other FPGA development, you may need a different version of Vivad. 
+## Step 1, Hardware Setup
+Start here by diving into the [Hardware](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/Hardware/)
 
-Download and install your selected version of Vivado. You will need a free Xilinx account. 
+## Step 2, Install Software
+Next, install software from Arduino and Xilinx following this [Tutorial](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/Software/)
 
-Vivado download: https://www.xilinx.com/support/download.html 
-
-### Step 2 - Install the Digilent Board Files
-If you are using one of the Digilent development boards you will need to perform this step. You can follow Digilent's programming guide using the link below. 
-
-Digilent board files instructions: https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk
+## Step 3, Using the Icii Bundle
+Learn how to use the setup to perform AI inferencing with the provided [Icii Bundle](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/IciiBundle/)
