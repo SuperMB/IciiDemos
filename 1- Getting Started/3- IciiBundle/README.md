@@ -35,7 +35,7 @@ There are 3...ish commands that you can use with the Example: Initialize, Start#
 That's it! Have fun, we are excited for you journey into Source AI. 
 
 
-## Going Through the Aruidno Example
+# Digging Into the Aruidno Example (Not Required)
 At this point, your Arduino - FPGA system should be successfully implementing you AI inference. This section is not required but will help you dig into the Arduino code. You will use the Arduino to collect data from sensors and send that data to the FPGA. Because of this, there is more flexibility in what you may want to do. To get you started, we provide a small example project tailored to your AI model. 
 
 In the Snowball open the Arduino folder.
