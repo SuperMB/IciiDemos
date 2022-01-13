@@ -3,34 +3,75 @@ Once one of our Yetis translate your AI model into an FPGA design, they toss you
 
 
 ## Programming your FPGA
-FPGA programming can be complicated with lots of steps, and we don't want you to have to do that. Like everything, we think its important to keep things simple. Inside the Snowball you should see 2 folders, 1 named Arduino, 1 names FPGA. Open the FPGA Folder. Here, you should find 2 files. 
+FPGA programming can be complicated with lots of steps, and we don't want you to have to do that. Like everything, we think its important to keep things simple. 
+
+Inside the Snowball you should see 2 folders, 1 named Arduino, 1 names FPGA.
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-1.png)
+
+
+Open the FPGA Folder. Here, you should find 2 files. 
 - IciiFpgaProgrammer.exe
 - SomethingSomethingSomething.mcs
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-2.png)
 
 Open a Powershell window and navigate to your Snowball. Make sure the USB cable is plugged into your computer and the FPGA board. Then, enter the following command:
+.\IciiFpgaProgrammer.exe .\SomethingSomethingSomething.mcs
+
+Reaplce SomethingSomethingSomething with your .mcs file name. 
+
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-3.png)
 
 some text will print out
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-4.png)
 
 and after a few minutes, you are finished!
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-5.png)
 
 Cycle power to the FPGA board. Now, anytime you power on the FPGA board the desired functionality will automatically load onto the FPGA and you will be ready to use it. 
 
 ## Programming the Arduino
-Programming your Arduino has only a few steps:
-- Make sure the Arduino is connected to your PC with a USB cable.
-- Click Tools > Board > and select Arduino Mega or Mega 2560
-- Click Tools > Port > and make sure the Arduino port is selected. It should be something similar to ACM0. 
-- Click the Right Arrow button in the top left to program!
+Programming your Arduino has only a few steps. First, make sure the Arduino is connected to your PC with a USB cable.
+
+
+In the Snowball open the Arduino folder, and then open the Example folder.
+
+
+You will see a handfull of .h and .cpp files. Don't worry about those, they are the structure to make communication with the FPGA board simple. Open the Arduino script provided, the Example.ino file. This should launch the Arduino IDE. 
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-6.png)
+
+
+Click Tools > Board > and select Arduino Mega or Mega 2560.
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-7.png)
+
+Click Tools > Port > and make sure the Arduino port is selected. It should be something similar to COM# or ACM0. 
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-8.png)
+
+Click the Right Arrow button in the top left to program!
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-9.png)
+
+Once the IDE says Done Uploading, the Arduino is programmed!
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-10.png)
 
 ## Using the Arduino Example
-Launch the Arduino terminal. 
-
 There are 3...ish commands that you can use with the Example: Initialize, Start#, Stop. 
-- Intialize: This is the first command you must issue after powering on the FPGA. This will ensure that it is in a state ready to accept data. 
-- Start#: This is more of a command set. For each possible class, you can call Start to begin emulating a detection for the class. For example:
-    - Start0
-    - Start1
-- Stop: This stops the current detection stream
+
+Launch the Arduino terminal by clicking the magnifying glass in the top right. 
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-11.png)
+
+Intialize: This is the first command you must issue after powering on the FPGA. This will ensure that it is in a state ready to accept data. 
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-12.png)
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-13.png)
+
+
+Start#: This is more of a command set. For each possible class, you can call Start to begin emulating a detection for the class. For example:
+  - Start0
+  - Start1
+
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-14.png)
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-15.png)
+
+Stop: This stops the current detection stream
+![](https://icii.io/wp-content/uploads/2022/01/Snowball-16.png)
 
 That's it! Have fun, we are excited for you journey into Source AI. 
 
@@ -38,12 +79,6 @@ That's it! Have fun, we are excited for you journey into Source AI.
 # Digging Into the Aruidno Example (Not Required)
 At this point, your Arduino - FPGA system should be successfully implementing you AI inference. This section is not required but will help you dig into the Arduino code. You will use the Arduino to collect data from sensors and send that data to the FPGA. Because of this, there is more flexibility in what you may want to do. To get you started, we provide a small example project tailored to your AI model. 
 
-In the Snowball open the Arduino folder.
-
-Next, open the Example folder.
-
-
-You will see a handfull of .h and .cpp files. Don't worry about those, they are the structure to make communication with the FPGA board simple. Open the Arduino script provided, the Example.ino file. This should launch the Arduino IDE. 
 
 The Example is designed to enable you to send a detection from your training/testing data, and it will modify inputs slighty for each detection. This is done to mimic how the system may be used in the wild. We will now go through each section of the Example.ini.
 
