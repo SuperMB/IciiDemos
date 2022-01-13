@@ -1,77 +1,144 @@
-# Installing the Required Software
-To use the associated hardware you will need to download software from the vendors to program the device. The respective software programs are:
-- FPGA: Xilinx Vivado Lab Edition
-- Arduino: Arduino IDE 
+# Using Your Snowball
+Once one of our Yetis translate your AI model into an FPGA design, they toss you a Snowball, packed with everything you need. The Snowball contains what you need to program your FPGA and Arduino.  First we will go over programming the FPGA and then the Arduino. 
 
 
-## Step 1 - Install Vivado Lab Edition
-For use with Icii, we recommend downloading the Vivado Lab Edition Verison. This version takes up much less space on your computer and will enable to program your FPGA. Furthermore, we recommend version 2020.1 as this is what our tooling is currently tested with. 
+## Programming your FPGA
+FPGA programming can be complicated with lots of steps, and we don't want you to have to do that. Like everything, we think its important to keep things simple. Inside the Snowball you should see 2 folders, 1 named Arduino, 1 names FPGA. Open the FPGA Folder. Here, you should find 2 files. 
+- IciiFpgaProgrammer.exe
+- SomethingSomethingSomething.mcs
 
-First, install [Vivado 2020.1 Lab Edition](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html) by clicking [this link](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html), which should open the page below. 
+Open a Powershell window and navigate to your Snowball. Make sure the USB cable is plugged into your computer and the FPGA board. Then, enter the following command:
 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-1.png)
+some text will print out
 
-Then, click 2020.1 which should then expand.
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-2.png)
+and after a few minutes, you are finished!
 
-Scroll down until you see Vivado Lab Solutions - 2020.1. Click the download link for your operating system. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-3.4.png)
+Cycle power to the FPGA board. Now, anytime you power on the FPGA board the desired functionality will automatically load onto the FPGA and you will be ready to use it. 
 
-This will take you to a sign in page. If you have a Xilinx account, sign in. If not, create one, it's free, and then you may have to repeat the previous steps.
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-5.png)
+## Programming the Arduino
+Programming your Arduino has only a few steps:
+- Make sure the Arduino is connected to your PC with a USB cable.
+- Click Tools > Board > and select Arduino Mega or Mega 2560
+- Click Tools > Port > and make sure the Arduino port is selected. It should be something similar to ACM0. 
+- Click the Right Arrow button in the top left to program!
 
-Fill in the required fields and click the Download button.
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-6.2.png)
+## Using the Arduino Example
+Launch the Arduino terminal. 
 
-This will download a file with a name similar to "Xilinx_Vivado_Lab_Win_2020.1_0602_1208.tar.gz". Extract the files. If you are running Windows, you may need to download a program such as [7-Zip](https://www.7-zip.org/). If you are unfamiliar with .tar.gz files, you may first extract the files, resulting in a .tar, and then extract the files from the .tar. 
+There are 3...ish commands that you can use with the Example: Initialize, Start#, Stop. 
+- Intialize: This is the first command you must issue after powering on the FPGA. This will ensure that it is in a state ready to accept data. 
+- Start#: This is more of a command set. For each possible class, you can call Start to begin emulating a detection for the class. For example:
+    - Start0
+    - Start1
+- Stop: This stops the current detection stream
 
-Run the Vivado installer, the file "xsetup.exe". This will launch a window like the one below. If it asks you to install latest, hit continue to continue installing version 2020.1.
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-7.png)
-
-Click Next.
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-8.png)
-
-As with all software, you have to agree to Xilinx's terms to use the software. Click the 3 "I Agree" checkboxes, then click Next.
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-9.png)
-
-One this screen, make sure to have Install Cable Drivers selected. This is required to be able to program your FPGA. You can choose whether to leave Enable WebTalk selected. Click Next.  
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-10.png)
-
-You can set the download location. We recommend leaving the defaults. If you change the path too much it may hinder future steps. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-11-1.png)
-
-Click Install. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-12.png)
-
-The installer will remain on a similar screen untill the installation is finished. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-13.png)
+That's it! Have fun, we are excited for you journey into Source AI. 
 
 
-### Step 1.5 - Install the Digilent Board Files
-If you are using one of the Digilent development boards you will need to perform this step. Digilent provides a good instructions, so follow their [Tutorial](https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk).
+## Going Through the Aruidno Example
+At this point, your Arduino - FPGA system should be successfully implementing you AI inference. This section is not required but will help you dig into the Arduino code. You will use the Arduino to collect data from sensors and send that data to the FPGA. Because of this, there is more flexibility in what you may want to do. To get you started, we provide a small example project tailored to your AI model. 
 
-## Step 2 - Install the Arduino IDE
+In the Snowball open the Arduino folder.
 
-Next, install the Arduino IDE so that you can program your Arduino. Go to the [Arduino Download Page](https://www.arduino.cc/en/software). Click your respective operating system on the right side. This tutorial follows a Windows installation. Click "Win 7 and newer".
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-1.png)
+Next, open the Example folder.
 
-If you like, you may contribute to Arduino, otherwise click Just Download. This will download an installer file with a name similar to "arduino-1.8.19-windows.exe". 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-2.png)
 
-Run the installer that was just downloaded, it should open a window as seen below. It may ask you for permission to run the installer. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-3.png)
+You will see a handfull of .h and .cpp files. Don't worry about those, they are the structure to make communication with the FPGA board simple. Open the Arduino script provided, the Example.ino file. This should launch the Arduino IDE. 
 
-We recommend leaving all of the defaults selected. Click Next. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-4.png)
+The Example is designed to enable you to send a detection from your training/testing data, and it will modify inputs slighty for each detection. This is done to mimic how the system may be used in the wild. We will now go through each section of the Example.ini.
 
-If you want, you may change the download location, but we recommend using the default. Click Install. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-5.png)
+### Input for Example
 
-The Arduino installer will now proceed to install the software. Let it continue until it finishes. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-6.png)
+```
+//*********************************************************************************
+//**************************** Input for Example **********************************
+//*********************************************************************************
+const int inputCount = 6;
+bool detecting = false;
 
-Once the installer is finished, it will show Completed. Click Close. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-7.png)
+float dataValues[inputCount];
+float initialDataValuesClass0[inputCount] = {
+   2577.32, 1.00781, 52500,  134868000, 7656.25, 14062.5
+};
+float initialDataValuesClass1[inputCount] = {
+  2577.115, 1.00781, 52500, 1978150000,    7500, 14648.4
+};
+```
 
-## Next Steps
-Congratulations! You have now finished installing the required software. Click [Here](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/IciiBundle/) to continue the tutorial and learn about how to use the Icii Bundle that you receive. 
+inputCount defines the number of inputs into your ANN. 
+
+detecting is set to true when you begin an example detection, and set to false when you tell it to Stop.
+
+dataValues is populated with the values to send to the FPGA. 
+
+initialDataValuesClass0 is an input vector that should be classified as 0 according to your data.
+
+initialDataValuesClass1 is an input vector that should be classified as 1 according to your data.
+
+
+
+### Implement OnResultReceived
+```
+//*********************************************************************************
+//************************ Implement OnResultReceived *****************************
+//*********************************************************************************
+
+class TealeCommunicator : public QuantizedClassifierCommunicator
+{
+  public:
+    TealeCommunicator()
+    {
+      /*Required*/ SetResetPin(4);
+      /*Required*/ SetInputCount(inputCount);
+      /*Required*/ SetOutputCount (2);    
+    }
+  
+  protected:  
+    /*Required*/ virtual void OnResultReceived()
+    {
+      //Call parent class to determine classification
+      /*Required*/ QuantizedClassifierCommunicator::OnResultReceived();
+
+      //Print inference result
+      String resultString = 
+          "Class:\t" + String(Classification) + 
+          "\tConfidence:\t" + String(Confidence) + 
+          "\tInference:\t" + String(SuccessfulInferences);
+      for(int i = 0; i < OutputCount; i++)
+          resultString += "\tClass " + String(i) + ":\t" + String(Classes[i]);
+      Serial.println(resultString);  
+      
+      //For demo, alter input values slightly
+      for(int i = 0; i < InputCount; i++)
+        dataValues[i] += (int)((float)random(-1, 2) * 0.001 * (Maximums()[i] - Minimums()[i]));
+
+      //For demo, if Stop has not been sent, send next detection to FPGA
+      if(detecting)
+        SendDetection(dataValues, inputCount);
+    }
+    
+    /*Required*/ virtual float* Minimums() { return _minimums; }
+    /*Required*/ virtual float* Maximums() { return _maximums; }
+  
+  private:
+    /*Required*/ const float _minimums[6] = { 2577.115, 0.53418, -10000.0, 1301470.0, 6250.0, 1171.88 };
+    /*Required*/ const float _maximums[6] = { 4561.817, 3.66016, 137500.0, 2045240000.0, 16093.8, 25195.3 };
+};
+TealeCommunicator tealeCommunicator = TealeCommunicator();
+```
+This block of code is what you need to implement to handle the result of the AI inference. First, let's talk about the boiler plate items.
+- First, your custom class inherits from QuantizedClassifierCommunicator. 
+- In the constructor, you must call SetRestPin, SetInputCount, and SetOutputCount to set the needed internal paramters.  
+- Other required fields are the Minimums and Maximums at the bottom, also pulled from analyzing your training and testing data. 
+- At the end of the block, create an instantiation of the class. 
+
+It is also important to point out that all of the required components are tagged with /* Required */.
+
+Now, let's focus on the OnResultReceived() function. This function overrides the virtual parent function and is called once the FPGA returns a result.
+- First, we call the parent class's OnResultReceived using QuantizedClassifierCommunicator::OnResultReceived(); This puts the result into the Classes, Classification, and Confidence variables. 
+- Then, for ease of use, we print the result to the terminal. 
+- Next, we alter that input vector slightly for the example. 
+- Finally, we send a new detection to the FPGA. 
+
+In your own implementation, you will need to decide when and where to gather new sensor readings and send them to the FPGA. We will happily assist you on decide how to go about this. 
+
