@@ -74,4 +74,4 @@ Once the installer is finished, it will show Completed. Click Close.
 ![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Aruidno-7.png)
 
 ## Next Steps
-Congratulations! You have now finished installing the required software. Click [Here](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/Hardware) to continue the tutorial and setup your hardware. 
+Congratulations! You have now finished installing the required software. Click [Here](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/2-%20Hardware/) to continue the tutorial and setup your hardware. 
