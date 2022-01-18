@@ -99,4 +99,5 @@ At this point, the Arduino and ArtyS7 should be connected as shown in Image 3.
 
 The final step is to connect the Arduino and ArtyS7 to your PC. Connect a USB cable to each using the respective cable type and connect them to your PC. The PC - Arduino connection will be used to program the Arduino and observe the results from the ANN inferences. The PC - ArtyS7 connection will only be used to program the ArtyS7. Once programmed, the ArtyS7 will function as expected on power up without a PC connection.
 
-This ends the connection tutorial. A future tutorial will walk you through programming and using each of the components. 
+## Next Steps
+Congratulations! You have now finished setting up the harfware. Click [Here](https://github.com/SuperMB/IciiDemos/tree/main/1-%20Getting%20Started/3-%20IciiBundle/) to continue the tutorial and learn how to use your Icii Bundle/Snowball. 
