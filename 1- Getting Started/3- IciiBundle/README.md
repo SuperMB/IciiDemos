@@ -27,7 +27,8 @@ some text will print out
 and after a few minutes, you are finished!
 ![](https://icii.io/wp-content/uploads/2022/01/Snowball-5.png)
 
-Cycle power to the FPGA board. Now, anytime you power on the FPGA board the desired functionality will automatically load onto the FPGA and you will be ready to use it. 
+### Cycle Power to the FPGA 
+Finally, cycle power to the FPGA board. It is important not to skip this step! Now, anytime you power on the FPGA board the desired functionality will automatically load onto the FPGA and you will be ready to use it. 
 
 ## Programming the Arduino
 Programming your Arduino has only a few steps. First, make sure the Arduino is connected to your PC with a USB cable.
