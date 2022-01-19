@@ -47,8 +47,8 @@ The installer will remain on a similar screen untill the installation is finishe
 ![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-13.Smaller.png)
 
 
-### Step 1.5 - Install the Digilent Board Files
-If you are using one of the Digilent development boards you will need to perform this step. Digilent provides a good instructions, so follow their [Tutorial](https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk).
+<!-- ### Step 1.5 - Install the Digilent Board Files -->
+<!-- If you are using one of the Digilent development boards you will need to perform this step. Digilent provides a good instructions, so follow their [Tutorial](https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-sdk). -->
 
 ## Step 2 - Install the Arduino IDE
 
