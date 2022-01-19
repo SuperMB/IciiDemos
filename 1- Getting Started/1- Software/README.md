@@ -38,7 +38,7 @@ One this screen, make sure to have Install Cable Drivers selected. This is requi
 ![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-10.Smaller.png)
 
 You can set the download location. We recommend leaving the defaults. If you change the path too much it may hinder future steps. 
-![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-11-1.Smaller.png)
+![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-11.Smaller.png)
 
 Click Install. 
 ![Vivado archive download page](https://icii.io/wp-content/uploads/2022/01/Download-Vivado-12.Smaller.png)
